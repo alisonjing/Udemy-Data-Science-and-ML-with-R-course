@@ -7,8 +7,9 @@ library(ggplot2movies)
 pl = ggplot(movies, aes(x=rating))
 
 # Geometry
-#alpha is transparency measurement
-pl2 <- pl + geom_histogram(binwidth = 0.1, color='red', fill='pink', alpha=0.4)
+# alpha is transparency measurement
+# Here we use advanced method aes(fill=...count...) to color the histogram based on the actual counts. 
+pl2 <- pl + geom_histogram(binwidth = 0.1, aes(fill=..count..))
 
 pl3 <- pl2 + xlab('Movie Rating') + ylab('Count')
 

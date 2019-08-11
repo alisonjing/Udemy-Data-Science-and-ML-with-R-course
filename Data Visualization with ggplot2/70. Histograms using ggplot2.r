@@ -7,4 +7,11 @@ library(ggplot2movies)
 pl = ggplot(movies, aes(x=rating))
 
 # Geometry
-print(pl + geom_histogram(binwidth = 0.1))
+#alpha is transparency measurement
+pl2 <- pl + geom_histogram(binwidth = 0.1, color='red', fill='pink', alpha=0.4)
+
+pl3 <- pl2 + xlab('Movie Rating') + ylab('Count')
+
+print(pl3)
+
+

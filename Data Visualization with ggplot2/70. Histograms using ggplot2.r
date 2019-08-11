@@ -12,6 +12,6 @@ pl2 <- pl + geom_histogram(binwidth = 0.1, color='red', fill='pink', alpha=0.4)
 
 pl3 <- pl2 + xlab('Movie Rating') + ylab('Count')
 
-print(pl3)
+print(pl3 + ggtitle("MY TITLE")) + theme_update(plot.title = element_text(hjust = 0.5))
 
 
